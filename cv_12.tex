@@ -21,6 +21,8 @@
 
 \documentclass[a4paper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
 
+\XeTeXgenerateactualtext=1
+
 \usepackage{wrapfig}
 \usepackage{graphicx}
 \usepackage{fontawesome5}
@@ -37,7 +39,7 @@
 \newdimen\skillb@level
 \newdimen\skillb@length
 \newdimen\skillb@height
-\skillb@length=120pt%
+\skillb@length=160pt%
 \skillb@height=10pt%
 \newcommand*{\skillbar}[1]{%
     \skillb@level=\dimexpr#1\skillb@length/100\relax%
@@ -55,301 +57,263 @@
 
 \begin{document}
 
-%\begin{minipage}{0.33\textwidth}
-%\end{minipage}
-%\begin{minipage}{0.67\textwidth}
-
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-%\lastupdated % Print the Last Updated text at the top right
-%\begin{minipage}{0.1\textwidth}
-%\includegraphics[width=\textwidth]{pic}
-%\end{minipage}
-
 \begin{minipage}{1\textwidth}
-
-
 \namesection{}{Michaël de Vries}{ % Your name
-% \urlstyle{same}\url{http://debarghyadas.com} \\ % Your website, LinkedIn profile or other web address
-
-\faEnvelope  \hspace{0.2em}\href{mailto:vriesdemichael+cv@gmail.com}{vriesdemichael@gmail.com} | \faPhone \hspace{0.2em} (+31) 6 54938929 
-	\\ \faHome \hspace{0.2em} Almelo, The Netherlands | \faLinkedin \hspace{0.2em} \href{www.linkedin.com/in/vriesdemichael}{vriesdemichael}
-
+\faEnvelope \hspace{0.2em}\href{mailto:vriesdemichael@gmail.com}{vriesdemichael@gmail.com} | \faPhone \hspace{0.2em} (+31) 6 54938929 | \faHome \hspace{0.2em} Wierden, The Netherlands \\
+\faLinkedin \hspace{0.2em} \href{https://www.linkedin.com/in/vriesdemichael}{vriesdemichael} | \faGithub \hspace{0.2em} \href{https://github.com/vriesdemichael}{vriesdemichael}
 }
 \end{minipage}
 \\
-%\rule{\paperwidth}{0.4pt}
-
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}} % Horizontal rule
 \vspace{-5pt} % Reduce whitespace after the rule slightly
 
-
-
 %----------------------------------------------------------------------------------------
-%	LEFT COLUMN
+%	LEFT COLUMN (Page 1)
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width
+\vspace{0em}
 
 %------------------------------------------------
 % Education
 %------------------------------------------------
-%\section{}
-\vspace{0em}
-%\begin{center}
-\includegraphics[width=0.9\textwidth]{pic3}
-%\end{center}
-
 \section{Education} 
 
 \subsection{University of Twente}
-\descript{Premaster computer science}
-\location{Sep 2017 -  Apr 2018 | Enschede 
-	\\ Premaster as minor of bachelor
-}
-\sectionspace % Some whitespace after the section
+\descript{Premaster Computer Science}
+\location{Sep 2017 - Apr 2018 | Enschede}
+Premaster completed as a minor of Bachelor.
+\sectionspace
 
-%------------------------------------------------
-
-
-\subsection{Saxion university of applied sciences}
-\descript{Bachelor computer science}
-\location{Expected Nov 2018 | Enschede 
-	\\ Incl. 30EC in big data electives
-    }
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Links
-%------------------------------------------------
-
-% \section{Links} 
-
-% Github:// \href{https://github.com/deedydas}{\bf deedydas} \\
-% LinkedIn:// \href{https://www.linkedin.com/in/debarghyadas}{\bf debarghyadas} \\
-% YouTube:// \href{https://www.youtube.com/user/DeedyDash007}{\bf DeedyDash007} \\
-% Twitter:// \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
-% Quora:// \href{https://www.quora.com/Debarghya-Das}{\bf Debarghya-Das}
-
+\subsection{Saxion University}
+\descript{Bachelor Computer Science}
+\location{Graduated Nov 2018 | Enschede}
+Specialization in Big Data (30 EC).
+\sectionspace
 
 %------------------------------------------------
 % Skills
 %------------------------------------------------
-
 \section{Skills}
 
-\subsection{\faFlask \hspace{0.2em} Data science}
-\skill{Model development}{80}
-\skill{ETL}{30}
-\skill{Visualization}{60}
-\skill{Deployment}{70}
-
-\sectionspace % Some whitespace after the section
-
-
-\subsection{\faCode \hspace{0.2em}  Programming}
-\skill{Python}{95}
-\skill{Java}{60}
-%\skill{C}{50}
-%\skill{Scala}{40}
-
-
+\subsection{\faRobot \hspace{0.2em} Agentic Eng.}
+\skillbar{95} \\
+\location{Claude Code, Antigravity, GitHub Copilot, MCP, custom harnesses, ADRs}
 \sectionspace
-%----------------------------------------------------------------------------------------
 
-\subsection{\faTools \hspace{0.2em} tools} 
-\location{Linux (CentOS, Redhat, Ubuntu), TensorFlow, Keras, PyTorch, Jupyter, Docker, Bash, Apache Flink, Apache Spark, OSGi, Redis}
+\subsection{\faSync \hspace{0.2em} GitOps \& CI/CD}
+\skillbar{90} \\
+\location{ArgoCD, Helm, Tekton, GitHub Actions, Semantic Release, Renovate, Harbor, Nexus}
+\sectionspace
 
+\subsection{\faCloud \hspace{0.2em} Containers}
+\skillbar{90} \\
+\location{Kubernetes, OpenShift, Helm, Docker, RHEL}
+\sectionspace
 
+\subsection{\faCode \hspace{0.2em} Python}
+\skillbar{95} \\
+\location{uv, ruff, mypy, pytest, FastAPI, Typer, Operator Design, fastmcp}
+\sectionspace
+
+\subsection{\faLock \hspace{0.2em} Security \& SRE}
+\skillbar{85} \\
+\location{Keycloak, OIDC/OAuth2, K8s RBAC, Sealed Secrets, ESO, JSON Schema, OpenTelemetry, Splunk}
+\sectionspace
+
+\subsection{\faDatabase \hspace{0.2em} Databases}
+\skillbar{70} \\
+\location{CNPG, PostgreSQL, SQLAlchemy, pgvector, Teradata}
+\sectionspace
+
+\subsection{\faLaptopCode \hspace{0.2em} Frontend}
+\skillbar{30} \\
+\location{Playwright, Dashboards, Simple Portals}
 
 \end{minipage} % The end of the left column
 \hfill
-%
 %----------------------------------------------------------------------------------------
-%	RIGHT COLUMN
+%	RIGHT COLUMN (Page 1)
 %----------------------------------------------------------------------------------------
-%
-\begin{minipage}[t]{0.62\textwidth} % The right column takes up 66% of the text width of the page
+\begin{minipage}[t]{0.62\textwidth} % The right column takes up 62% of the text width
+\vspace{0em}
+
+%------------------------------------------------
+% Profile
+%------------------------------------------------
+\section{Profile}
+\raggedright{
+Senior DevOps \& Platform Engineer specializing in containerized ML platforms and sovereign GPU inference. Enthusiast for Agentic Engineering; leverages AI agents in personal projects to radically scale development velocity, secure architectures, and enforce rigorous discipline (ADRs and deep integration testing). Integrates architectural foresight with automated security sweeps to build robust, production-ready systems.
+}
+\sectionspace
 
 %------------------------------------------------
 % Experience
 %------------------------------------------------
-
-
-
 \section{Experience}
 
 \runsubsection{Belastingdienst}
-\descript{| Data science developer/engineer}
-
-\location{Jan 2019 – Now | Apeldoorn}
+\descript{| Senior Platform \& MLOps Engineer}
+\location{Jan 2019 – Present | Apeldoorn, The Netherlands}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
-
 \begin{tightitemize}
-\item Train and implement machine learning models for various NLP tasks.
-\item Framework development for model deployment.
-\item Role as scrum master.
+\item Co-developed Tekton CI/CD pipelines and standardized ArgoCD/Helm GitOps workflows to automate testing (pytest), static scans (ruff, Sonar, mypy), and OCI packaging.
+\item Engineered developer self-service platforms (OpenShift DevSpaces, Jupyter, private PyPI), bootstrapped sovereign CPU/GPU inference, and pioneered in-cluster PostgreSQL clustering (CNPG).
+\item Developed production-grade MCP-backed agents, hardened APIs (OIDC, Sealed Secrets, OpenTelemetry/Splunk/Langfuse), and served as Scrum Master in self-managed teams (SABEL/SAFe).
 \end{tightitemize}
-
-\sectionspace % Some whitespace after the section
-
-
+\sectionspace
 
 \runsubsection{Luminis}
-\descript{| Data science intern }
-
-\location{May 2018 – Nov 2018 | Apeldoorn}
-%\vspace{\topsep} % Hacky fix for awkward extra vertical space
-
+\descript{| Data Science Intern}
+\location{May 2018 – Nov 2018 | Apeldoorn, The Netherlands}
 \begin{tightitemize}
-\item Final internship in year 4 of the Bsc, graded 9.
-\item Trained a deep learning model for product categorization based on images of products.
-\item Created an interface for AI assisted product categorization using the trained model.
-\item Model (and interface) deployment in a docker container.
+\item Trained\ and deployed a deep learning model for image-based product categorization in Docker with a custom UI (Graded 9/10).
 \end{tightitemize}
-
-\sectionspace % Some whitespace after the section
-
+\sectionspace
 
 \runsubsection{Thales}
-\descript{| Software developer intern}
-
-\location{Sep 2016 – Feb 2017 | Hengelo}
-%\vspace{\topsep} % Hacky fix for awkward extra vertical space
-
+\descript{| Software Developer Intern}
+\location{Sep 2016 – Feb 2017 | Hengelo, The Netherlands}
 \begin{tightitemize}
-\item First internship in year 2 of the Bsc, graded 9.
-\item Developed a python interpreter which works within a multithreaded OSGi framework programmed in C.
-\item Work involved writing interoperable software in C and Python.
+\item Developed an interoperable Python interpreter running within a multithreaded C-based OSGi framework (Graded 9/10).
 \end{tightitemize}
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-
-\runsubsection{Comyoo}
-\descript{| Web developer}
-
-\location{Sep 2014 – Oct 2015 | Enschede}
-%\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightitemize}
-\item Part-time job during bachelor.
-\item Web development using Angular in combination with Joomla.
-\end{tightitemize}
-
-\sectionspace % Some whitespace after the section
-
-
-%------------------------------------------------
-% Projects
-%------------------------------------------------
-
-\section{Projects}
-
-\runsubsection{Premaster Research}
-\descript{| Human media interaction}
-\location{Sep 2017 - Feb 2018 | 10EC | University of Twente}
-A research on \textbf{speech emotion recognition} for the human media interaction section of the university of Twente. The research used speech fragments annotated with the emotions exhibited in the fragments by multiple annotators. The acoustic features of the speech fragments were analyzed to find discriminative features for a low level of agreement between annotators.
-
 \sectionspace
 
-\runsubsection{Data streaming}
-\descript{| JW Player}
-\location{Feb 2016 - Jun 2016 | 12EC | Saxion university of applied sciences}
-A group project in cooperation with two data scientist at JW Player. JW Player uses a \textbf{lambda architecture} for their video log processing, we were assigned to create a new branch in the \textbf{real-time processing} system. We implemented a \textbf{Apache Flink} streaming system which gave the top 10 topics of videos played in the past minute. To do so we implemented \textbf{topic modeling} using the stanford NPL package and trained a model based on data of the previous hour.
+%------------------------------------------------
+% Open Source Projects
+%------------------------------------------------
+\section{Open Source Projects}
 
-The system was connected to \textbf{kafka} and wrote to a \textbf{redis} database, all of which we hosted on a \textbf{AWS cluster}.
-
+\runsubsection{keycloak-operator}
+\descript{| Python, Kubernetes}
+\location{GitHub: \href{https://github.com/vriesdemichael/keycloak-operator}{vriesdemichael/keycloak-operator}}
+GitOps-compliant operator for managing Keycloak instances, realms, and clients. Designed with multi-tenant delegation, admission webhooks for validation, automated drift detection, and high test coverage.
 \sectionspace
 
-%\runsubsection{WiFi tracking}
-%\descript{| Saxion/Municipality of Enschede/NDIX}
-%\location{Feb 2015 - Jun 2016 | 12EC | Saxion university of applied sciences}
-%This was the first big project of the bachelor computer science. A tracking system for visitors of the inner city of Enschede was made based on the logs of an open WiFi network with multiple access points in the shopping district. We created an algorithm to determine coordinates of visitors based on signals received by the access points. As a visualization for the municipality we made an HTML front-end using \textbf{CartoDB} with heat maps, routes and statistics for every hour of any given day.
-
-
-%------------------------------------------------
-% Research
-%------------------------------------------------
-
-%\section{Research}
-%
-%\runsubsection{Cornell Robot Learning Lab}
-%\descript{| Head Undergrad Research}
-%
-%\location{Jan 2014 – Present | Ithaca, NY}
-%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which learns from large scale user preference feedback to plan robot trajectories in human environments. Publication submitted.
-%
-%\sectionspace % Some whitespace after the section
-%
-%%------------------------------------------------
-%
-%\runsubsection{Cornell Phonetics Lab}
-%\descript{| Head Undergraduate Researcher}
-%
-%\location{Mar 2012 – May 2013 | Ithaca, NY}
-%Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
-%
-%\sectionspace % Some whitespace after the section
-%
-%%------------------------------------------------
-%% Awards
-%%------------------------------------------------
-%
-%\section{Awards} 
-%
-%\begin{tabular}{rll}
-%2014	 & top 52/2500 & KPCB Engineering Fellow\\
-%2014	 & 2\textsuperscript{nd} most points & Google Code Jam, Qualification Round\\
-%2014	 & 1\textsuperscript{st}/50 & Microsoft Coding Competition, Cornell\\
-%2013	 & National & Jump Trading Challenge Finalist\\
-%2013 & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament \\
-%2012 & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
-%2011 & National & Indian National Mathematics Olympiad (INMO) Finalist \\
-%2010 & National & Comp. Soc. of India's National Programming Contest\\
-%\end{tabular}
-%
-%\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Societies
-%------------------------------------------------
-
-%\section{Societies} 
-%
-%\begin{tabular}{rll}
-%2014 & top 12\%ile & Tau Beta Pi Engineering Honor Society\\
-%2014 & National & The Global Leadership and Education Forum (tGELF)\\
-%2012 & National & Golden Key International Honor Society\\
-%2012 & National & National Society of Collegiate Scholars\\
-%\end{tabular}
-%
-%\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
+\runsubsection{bitbucket-dc-cli}
+\descript{| Go}
+\location{GitHub: \href{https://github.com/vriesdemichael/bitbucket-data-center-cli}{vriesdemichael/bitbucket-data-center-cli}}
+A production-focused CLI (bb) for automating pull requests, repository configuration, and bulk actions. Derived from OpenAPI specifications and designed as a stable interface for CI/CD and AI agent integrations.
 
 \end{minipage} % The end of the right column
 
 %----------------------------------------------------------------------------------------
-%	SECOND PAGE (EXAMPLE)
+%	PAGE 2: ATS-FRIENDLY SINGLE-COLUMN VERSION (DECOUPLED FROM LATO/RALEWAY LIGATURES)
 %----------------------------------------------------------------------------------------
+\newpage
 
-%\newpage % Start a new page
+\begingroup
+\fontspec{Roboto}
+\renewcommand{\familydefault}{\sfdefault}
+\selectfont
 
-%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+% Define custom lightweight headings for Page 2
+\newcommand{\atssection}[1]{
+  \vspace{16pt}
+  {\fontsize{13pt}{17pt}\selectfont\textbf{\uppercase{#1}}}
+  \vspace{4pt}
+  \hrule
+  \vspace{8pt}
+}
 
-%\section{Example Section}
+% Subtle note for human reviewers about the ATS optimization
+\begin{center}
+  \fontsize{9pt}{12pt}\selectfont
+  \textit{\color{gray}[ Note: Pages 2 and 3 are a single-column fallback optimized for automated ATS scanners and screen readers. ]}
+\end{center}
+\vspace{10pt}
 
-%\end{minipage} % The end of the left column
-%\hfill
-%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+% Centered header
+\begin{center}
+  {\fontsize{22pt}{26pt}\selectfont\textbf{Michaël de Vries}} \\
+  \vspace{6pt}
+  {\fontsize{10pt}{14pt}\selectfont
+  vriesdemichael@gmail.com | (+31) 6 54938929 | Wierden, The Netherlands \\
+  \href{https://www.linkedin.com/in/vriesdemichael}{linkedin.com/in/vriesdemichael} | \href{https://github.com/vriesdemichael}{github.com/vriesdemichael}
+  }
+\end{center}
+\vspace{10pt}
 
-%\section{Example Section 2}
+\atssection{Professional Summary}
+Senior DevOps and Platform Engineer specializing in containerized ML platforms and sovereign GPU inference. Enthusiast for Agentic Engineering; leverages AI agents in personal projects to radically scale development velocity, secure architectures, and enforce rigorous discipline (ADRs and deep integration testing). Integrates architectural foresight with automated security sweeps to build robust, production-ready systems.
 
-%\end{minipage} % The end of the right column
+\atssection{Experience}
 
-%----------------------------------------------------------------------------------------
+\noindent \textbf{Belastingdienst} | \textit{Senior Platform \& MLOps Engineer} \\
+\textit{Jan 2019 – Present | Apeldoorn, The Netherlands}
+\begin{tightitemize}
+\item Led the engineering transition of data science workflows from standalone scripts to large-scale queue-based ML workloads, containerizing the stack in Kubernetes and OpenShift. Used ArgoCD for GitOps bootstrapping.
+\item Developed reusable MCP-backed agents for production usage.
+\item Set up initial local inference with enterprise GPUs to distribute limited capacity optimized for sovereign generative AI compute.
+\item Co-developed Tekton CI/CD pipelines automating quality/testing checks (ruff, Sonar, mypy) and OCI artifact packaging (Nexus, Harbor) with Helm post-sync integration tests.
+\item Engineered developer self-service platforms (OpenShift DevSpaces, Jupyter, private PyPI) and pioneered in-cluster PostgreSQL clustering (CNPG) to replace unsupported legacy database systems and bypass IT blockers.
+\item Developed production applications scoring among the highest for security in the organization, and participated in DSOMM DevSecOps assessments.
+\item Hardened platforms and APIs using robust security protocols (OAuth, OIDC, Sealed Secrets, network policies).
+\item Managed structured pod logs for central Splunk collection and established OpenTelemetry/Langfuse tracing.
+\item Worked in self-managed Scrum teams (ranging from 3 to 15 members) under the SABEL framework (SAFe adaptation), serving periodically as Scrum Master.
+\end{tightitemize}
+\vspace{10pt}
+
+\noindent \textbf{Luminis} | \textit{Data Science Intern} \\
+\textit{May 2018 – Nov 2018 | Apeldoorn, The Netherlands}
+\begin{tightitemize}
+\item Trained and deployed a deep learning product categorization model using product images, packaged in a Docker container with a custom user interface (Graded 9/10).
+\end{tightitemize}
+\vspace{10pt}
+
+\noindent \textbf{Thales} | \textit{Software Developer Intern} \\
+\textit{Sep 2016 – Feb 2017 | Hengelo, The Netherlands}
+\begin{tightitemize}
+\item Developed an interoperable Python interpreter running within a multithreaded C-based OSGi framework (Graded 9/10).
+\end{tightitemize}
+\vspace{10pt}
+
+\noindent \textbf{Comyoo} | \textit{Web Developer} \\
+\textit{Sep 2014 – Oct 2015 | Enschede, The Netherlands}
+\begin{tightitemize}
+\item Developed web applications utilizing Angular and Joomla database systems.
+\end{tightitemize}
+
+\atssection{Open Source Projects}
+
+\noindent \textbf{keycloak-operator} | \textit{Python, Kubernetes} \\
+\textit{GitHub: github.com/vriesdemichael/keycloak-operator}
+\begin{tightitemize}
+\item Developed a production-ready, GitOps-compliant Keycloak operator facilitating cross-namespace realm and client configuration.
+\item Set up comprehensive automated test coverage, example validation, and automated GitHub Actions workflows featuring documentation builds testing code snippets against live examples.
+\end{tightitemize}
+\vspace{10pt}
+
+\noindent \textbf{bitbucket-data-center-cli} | \textit{Go} \\
+\textit{GitHub: github.com/vriesdemichael/bitbucket-data-center-cli}
+\begin{tightitemize}
+\item Built a Go-based command line interface (bb) for Bitbucket Server/Data Center enabling automated repository/PR operations, derived from OpenAPI specifications and designed as a stable interface for CI/CD and AI agent integrations.
+\end{tightitemize}
+
+\atssection{Education}
+
+\noindent \textbf{Saxion University of Applied Sciences} | \textit{Bachelor of Computer Science} \\
+\textit{Graduated Nov 2018 | Enschede, The Netherlands | Specialization in Big Data (30 EC)}
+\vspace{10pt}
+
+\noindent \textbf{University of Twente} | \textit{Premaster Computer Science} \\
+\textit{Sep 2017 – Apr 2018 | Enschede, The Netherlands}
+
+\atssection{Skills}
+\begin{tabular}{ll}
+\textbf{Agentic Engineering:} & Claude Code, Antigravity, GitHub Copilot, MCP, custom harnesses, ADRs \\
+\textbf{CI/CD \& GitOps:} & ArgoCD, Helm, GitOps, Tekton, GitHub Actions, Semantic Release, Renovate, Harbor, Nexus \\
+\textbf{Containers \& Platforms:} & Kubernetes, OpenShift, Helm, Docker, RHEL, Linux \\
+\textbf{Python Ecosystem:} & Python (expert), uv, ruff, mypy, pytest, FastAPI, Typer, K8s Operator Design, JSON Schema, CRD design, fastmcp, Bash \\
+\textbf{Security \& SRE:} & Keycloak, OIDC / OAuth2, Kubernetes RBAC, Sealed Secrets, ESO (knowledge), OpenTelemetry, Langfuse, Splunk, DSOMM, JSON Schema \\
+\textbf{Databases:} & CNPG, PostgreSQL, SQLAlchemy, pgvector, Teradata \\
+\textbf{Frontend:} & Playwright, Dashboards, Simple Portals \\
+\end{tabular}
+
+\endgroup
 
 \end{document}
